@@ -1,12 +1,14 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
 
 
-//Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
+//Create an object called me. Give it a key of name with the value being your name,
+// and another key of age with the value being your age. Then alert your name using dot notation.
 
   //Code here
-
-
-
+  var me = {
+    name: 'Denver',
+    age: 38
+  }
 
 
 
@@ -15,29 +17,41 @@
 
 
 
-//Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
+//Make a 'favoriteThings' object that contains the following
+//keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
   //Code here
 
+var favoriteThings = {
+  band: "abc",
+  food: "junk",
+  person: me,
+  book: 'none',
+  movie: 'any',
+  holiday: 'all'
+}
 
 
 
 
 
+//After you've made your object, add another key named 'car' with the value being
+//your favorite car and then another key named 'brand' with the value being your favorite brand.
 
-//After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
+  //Code here
+favoriteThings.car = 'mine';
+favoriteThings.brand = 'huh';
+
+
+
+
+//Now change the value of the food key in your favoriteThings object to
+//be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 
   //Code here
 
-
-
-
-
-//Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
-
-  //Code here
-
-
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 
 
@@ -45,19 +59,25 @@
 
 
 
-/* 
+/*
 Create an empty Object called backPack. Now, create a variable called 'item'
 and set it equal to the string 'firstPocket'. Using bracket notation,
 add a 'firstPocket' key (or property) to backPack, using 'item'.
 Set the value of that key to 'chapstick'.
 
 Using dot notation, add another key (or property) to your backPack object
-that is named color, with the value being the color of your backpack. 
+that is named color, with the value being the color of your backpack.
 */
 
   //Code here
 
+var backPack = {};
 
+var item = 'firstPocket';
+
+backPack[item] = 'chapstick';
+
+backPack.color = 'orange';
 
 
 
@@ -66,17 +86,18 @@ that is named color, with the value being the color of your backpack.
 
   //Code here
 
- 
+// alert(backPack);
+
 
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
-Instead, console.log your whole backPack object and then check out the console. 
+Instead, console.log your whole backPack object and then check out the console.
 */
 
   //Code here
 
-
+// console.log(backPack);
 
 
 
@@ -98,7 +119,8 @@ var user2 = {
 
   //Code Here
 
-
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";
 
 
 
@@ -120,18 +142,24 @@ var user2 = {
 
   //Code Here
 
-
+var methodCollection = {};
 
 
 /*
 Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
- which logs 'hello' to the console. 
+ which logs 'hello' to the console.
  */
 
   //Code Here
 
+methodCollection.alertHello = function() {
+  alert('hello');
+}
 
+methodCollection.logHello = function() {
+  console.log('hello');
+}
 
 
 
@@ -139,8 +167,9 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
-
-
+//
+// methodCollection.alertHello();
+// methodCollection.logHello();
 
 
 
@@ -156,18 +185,35 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
 
+function makePerson(name, birthday, ssn) {
+  return {
+    name: name,
+    birthday, birthday,
+    ssn, ssn
+  }
+}
 
 
 
-  
 
 
 //NEXT PROBLEM
 
 
 
-// Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
+// Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode
+//o make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
   //Code Here
 
 
+function makeCard(cardNumber, expirationDate, securityCode) {
+
+return {
+  cardNumber: cardNumber,
+  expirationDate: expirationDate,
+  securityCode: securityCode
+}
+
+
+}
